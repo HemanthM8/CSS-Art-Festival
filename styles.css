@@ -1,199 +1,123 @@
 body {
-  margin: 0;
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-.pikachu {
+.impostor {
+  position: relative;
+}
+.impostor .body {
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 35% 45% 0 0;
+  border: 30px solid #000;
 }
-.feet {
+.impostor .body .fill {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  height: 100%;
+  background: #7B0236;
 }
-.foot {
-  width: 40px;
-  height: 20px;
-  background: #fdd835;
-  border-radius: 50%;
-  box-shadow: 0 3px 0 #e0b400;
-  position: relative;
-}
-.left-foot {
-    margin-left: 10px;
-}
-.right-foot {
-  margin-right: 10px;
-}
-.ear {
+.impostor .body .shadow {
   position: absolute;
-  width: 40px;
-  height: 120px;
-  background: #fdd835;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(-15deg);
-  top: 0;
-  z-index: 1;
+  width: 100%;
+  height: 90%;
+  background: #C70A01;
+  border-radius: 0% 10% 25% 48% / 20% 0% 100% 100%;
 }
-.left-ear {
-  left: 40px;
-  transform: rotate(-25deg);
-  border-top: 30px solid #2d2d2d;
+.impostor .glass-bowl {
+  position: absolute;
+  width: 220px;
+  height: 130px;
+  background: #4A646D;
+  top: 90px;
+  right: -20px;
+  border: 30px solid black;
+  border-radius: 25% 45% 40% 40% / 50%;
+  transform: rotate(-4deg);
+  overflow: hidden;
 }
-.right-ear {
+.impostor .glass-bowl .shadow-blue {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 70px;
+  background: #94C9DB;
+  border-radius: 10% 10% 100% 100% / 100% 100% 50% 100%
+  
+}
+.impostor .glass-bowl .shadow-white {
+  position: absolute;
+  top: 10px;
   right: 40px;
-  transform: rotate(25deg);
-  border-top: 30px solid #2d2d2d;
-}
-.eye {
-  position: absolute;
-  width: 40px;
+  width: 100px;
   height: 40px;
-  background: #2d2d2d;
-  border-radius: 50%;
-  top: 50px;
-}
-.left-eye {
-  left: 40px;
-}
-.right-eye {
-  right: 40px;
-}
-.eye-shine {
-  width: 10px;
-  height: 10px;
   background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 8px;
-  left: 8px;
+  border-radius: 30% 70% 30% 30% / 30% 70% 30% 60%;
 }
-.nose {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background: #2d2d2d;
-  border-radius: 50%;
-}
-.mouth {
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  width: 60px;
-  height: 30px;
-  border-bottom: 5px solid #2d2d2d;
-  border-radius: 0 0 50px 50px;
-  transform: translateX(-50%);
-}
-.cheek {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: #ff5252;
-  border-radius: 50%;
-  top: 110px;
-}
-.left-cheek {
-  left: 10px;
-}
-.right-cheek {
-  right: 10px;
-}
-.body {
-  position: absolute;
-  top: 240px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 160px;
-  background: #fdd835;
-  border-radius: 50% 50% 40% 40%;
-  box-shadow: 0 5px 0 #e0b400;
-}
-.tail {
-  position: absolute;
-  top: 290px;
-  left: 0;
-  z-index: 0;
-}
-.tail-part {
-  width: 40px;
-  height: 20px;
-  background: #fdd835;
-  border: 3px solid #d4af00;
-  position: absolute;
-}
-.part-1 {
-  transform: rotate(20deg);
-  top: 0;
-  left: 0;
-}
-.part-2 {
-  transform: rotate(-20deg);
-  top: 15px;
-  left: 20px;
-}
-.part-3 {
-  transform: rotate(15deg);
-  top: 30px;
-  left: 40px;
-}
-.tail-end {
-  width: 20px;
-  height: 40px;
-  background: #2d2d2d;
-  border-radius: 4px;
-  position: absolute;
-  top: 40px;
-  left: 65px;
-  transform: rotate(5deg);
-}
-.hands {
-  position: absolute;
-  top: 270px;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
+.impostor .legs {
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
-  z-index: 2;
+  transform: translatey(-30px);
 }
-.head {
+.impostor .legs .leg-left {
+  width: 110px;
+  height: 130px;
+  background: #7B0236;
+  border-left: 30px solid #000; 
+  border-bottom: 30px solid #000;
+  border-right: 30px solid #000;
+  border-radius: 0 0 40% 40%
+}
+.impostor .legs .leg-right {
   position: relative;
-  top: 50px;
-  margin: auto;
-  width: 220px;
-  height: 200px;
-  background: #fdd835;
-  border-radius: 50% 50% 40% 40%;
-  z-index: 2;
-  box-shadow: 0 5px 0 #e0b400;
+  width: 90px;
+  height: 105px;
+  background: #7B0236;
+  border-left: 30px solid #000; 
+  border-bottom: 30px solid #000;
+  border-right: 30px solid #000;
+  border-radius: 0 0 40% 40%;
 }
-.hand {
-  width: 30px;
-  height: 50px;
-  background: #fdd835;
+.impostor .legs .leg-right:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100px;
+  height: 30px;
+  background: black;
+  border-radius: 0 0 100% 0
+}
+.impostor .backpack {
+  position: absolute;
+  height: 280px;
+  width: 90px;
+  background: red;
+  border: 30px solid #000;
+  border-radius: 40% 0 0 40% / 15%;
+  left: -75px;
+  top: 130px;
+  overflow: hidden;
+}
+.impostor .backpack .shadow {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background: #7B0236;
+  bottom: 0;
+  border-radius: 40% 0 0 0 / 10% 0 0 0;
+}
+.impostor .floor-shadow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 450px;
+  height: 80px;
+  background: #525858;
   border-radius: 50%;
-  box-shadow: 0 3px 0 #e0b400;
-  transform: rotate(20deg);
-}
-.left-hand {
-  transform: rotate(-30deg);
-  margin-left: 50px;
-}
-.right-hand {
-    margin-right: 50px;
-    transform: rotate(30deg);
 }
